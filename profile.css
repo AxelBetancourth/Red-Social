@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  
+  h1 {
+    margin: 0;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: 34px;
+    width: 130px;
+    border: none;
+    background: #ff362b34;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .lable {
+    line-height: 20px;
+    font-size: 17px;
+    color: #FF342B;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .button:hover {
+    background: #ff362b52;
+  }
+  
+  .button:hover .svg-icon {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+
+
+
+/* Estilos para el contenido principal */
+main.contenido-perfil {
+    padding: 20px;
+  }
+  
+  /* Estilos para la información del perfil */
+  .perfil-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .perfil-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  .perfil-details p {
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+  }
+  
+  .publicacion {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .publicacion h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .publicacion p {
+    margin-bottom: 20px;
+  }
+  
+  .publicacion img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .enlace-ver-mas {
+    background-color: #FF342B;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  .enlace-ver-mas:hover {
+    background-color: #ff362b34;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .paginacion a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .pagina-actual {
+    background-color: #FF342B;
+    color: #fff;
+  }

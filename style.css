@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+    url(img/hero.jpg);
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+     color: #fff;
+}
+
+.text {
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 20px;
+
+}
+
+.text p{
+    text-align: justify; 
+}
+
+.nav {
+
+    --state-close: scale(0);/*Escala a 0 osea que desaparecera*/
+    --state-menu: scale(1);/*Escala a 1 se mantendra y no desaparecera*/
+    --state-menu__close: translate(-100%);/*El valor "-100%" indica que el
+     elemento se desplazará hacia la izquierda en un 100% de su propio ancho.*/
+
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav:target{
+    --state-close: scale(1);/*Cuando el usuario toque se mostrara*/
+    --state-menu: scale(0);/*Cuando el usuario toque no se mostrara*/
+    --state-menu__close: translate(0);/*Cuando el usuario toque se trasladara
+    otra vez a 0 del ancho de la imagen osea lo que era originalmente*/
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__menu,
+.nav__close
+{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__menu{
+    transform: var(--state-menu);/*Aqui se aplica las variables que creamos*/
+    z-index: 2;
+}
+
+.nav__close{
+    transform: var(--state-close);/*Aqui se aplica las variables que creamos*/
+    z-index: 2;
+}
+
+.nav__links{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+    transform: var(--state-menu__close);
+    transition: .3s transform;
+    z-index: 2;
+}
+
+.nav__link{
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 2px;/*Permite ajustar la distancia horizontal entre
+     cada letra individualmente.*/
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.principal{
+    background-color: aquamarine;
+}
+
+.a1{
+    color: #4169E1;
+    font-weight: 550;
+    border-bottom: 2px solid #4169E1;
+}
+
+.a2 a{
+    color: #4169E1;
+    font-weight: 550;
+    border-bottom: 2px solid #4169E1;
+}
+
+.container_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+
+.container_login {
+    background-color: #1B1024;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 10px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/*Pag-2*/
+
+.pag_2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(img/hero2.jpg);
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+    color: #d7d7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container_pag2 {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text_img_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  
+  .text_pag2 {
+    flex: 1 1 50%;
+    text-align: justify;
+    padding: 0 50px;
+  }
+  
+  .text_pag2 h3 {
+    font-size: 25px;
+  }
+  
+  .img_pag2 {
+    flex: 0 0 300px;
+    max-width: 100%;
+    opacity: 0.7;
+  }
+
+  .img_pag2 img{
+    border-radius: 30px;
+  }
+  
+
+/*Pag-3*/
+
+.pag_3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+    url(img/hero3.jpg);
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+    color: #d7d7d7;
+
+}
+
+.text_pag3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.container_pag3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.4em;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+       rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+       bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+/*Carga*/
+
+@-webkit-keyframes honeycomb {
+    0%,
+    20%,
+    80%,
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    30%,
+    70% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes honeycomb {
+    0%,
+    20%,
+    80%,
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    30%,
+    70% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  .honeycomb {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .honeycomb div {
+    -webkit-animation: honeycomb 2.1s infinite backwards;
+    animation: honeycomb 2.1s infinite backwards;
+    background: #f3f3f3;
+    height: 12px;
+    margin-top: 6px;
+    position: absolute;
+    width: 24px;
+  }
+  
+  .honeycomb div:after, .honeycomb div:before {
+    content: '';
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .honeycomb div:after {
+    top: -6px;
+    border-bottom: 6px solid #f3f3f3;
+  }
+  
+  .honeycomb div:before {
+    bottom: -6px;
+    border-top: 6px solid #f3f3f3;
+  }
+  
+  .honeycomb div:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    left: -28px;
+    top: 0;
+  }
+  
+  .honeycomb div:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    left: -14px;
+    top: 22px;
+  }
+  
+  .honeycomb div:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    left: 14px;
+    top: 22px;
+  }
+  
+  .honeycomb div:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    left: 28px;
+    top: 0;
+  }
+  
+  .honeycomb div:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    left: 14px;
+    top: -22px;
+  }
+  
+  .honeycomb div:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    left: -14px;
+    top: -22px;
+  }
+  
+  .honeycomb div:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    left: 0;
+    top: 0;
+  }
+
+
+
+/*Pag-4*/
+
+.pag_4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(img/hero4.jpg);
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+    color: #d7d7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+/*El pie de pagina*/
+footer{
+    background-color: #242628;
+    padding: 65px 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #bbbbbb;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: #FFFFFF;
+    padding-left: 6px;
+    
+}
+
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+
+@media (min-width:768px){
+    .text {
+        text-align: justify;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nav {
+        /*Estas son variable que se crearan*/
+        --state-menu: scale(0);/*Cuando se llega a este tamaño quiero que
+        ya no se muestre el incono de menu porque ya no lo necesito debido
+        a que el menu siempre se mostrara en pc*/
+        --state-menu__close: translate(0);/*Quiero que siempre se muestre el menu*/
+    }
+    
+    .nav:target{
+        --state-close: scale(0);/*Cuando el usuario toque ya no se morstara*/
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        align-content: center;
+        gap: 1.5em;
+        grid-auto-flow: column;
+        transform: unset;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        margin-top: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: center;
+        font-size: 20px;
+    
+    }
+
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text_img_container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .text_pag2,
+      .img_pag2 {
+        margin-right: 0;
+      }
+
+      .container_pag3{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 80px;
+        gap: 40px;
+    
+    }
+  }
